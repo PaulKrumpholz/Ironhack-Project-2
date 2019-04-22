@@ -5,12 +5,8 @@ const memeSchema = new Schema({
   picture: String,
   description: String,
   _owner: {type: Schema.Types.ObjectId, ref: "User"},
-  _likes: [
-    {type: Schema.Types.ObjectId, ref: "User"},
-  ],
-  _favorites: [
-    {type: Schema.Types.ObjectId, ref: "User"},
-  ],
+  _likes: {type: Schema.Types.ObjectId, ref: "User"},
+  _favorites: {type: Schema.Types.ObjectId, ref: "User"},
   _comments: [{
     type: String,
     type: Schema.Types.ObjectId, ref: "User"
