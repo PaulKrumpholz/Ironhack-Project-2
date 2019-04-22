@@ -4,18 +4,17 @@ const Schema   = mongoose.Schema;
 const memeSchema = new Schema({
   picture: String,
   description: String,
-  owner: [
-    {},
+  _owner: {type: Schema.Types.ObjectId, ref: "User"},
+  _likes: [
+    {type: Schema.Types.ObjectId, ref: "User"},
   ],
-  likes: [
-    {},
+  _favorites: [
+    {type: Schema.Types.ObjectId, ref: "User"},
   ],
-  favorites: [
-    {},
-  ],
-  comments: [
-    {},
-  ]
+  _comments: [{
+    type: String,
+    type: Schema.Types.ObjectId, ref: "User"
+  }]
 }, {
   timestamps: {
     createdAt: 'created_at',

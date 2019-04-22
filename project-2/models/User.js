@@ -15,18 +15,12 @@ const userSchema = new Schema({
   },
   password: String,
   profilePic: String,
-  friends: [
-    {},
+  _friends: [
+    {type: Schema.Types.ObjectId, ref: "User"},
   ],
-  favouriteMemes: [
-    {},
+  _favouriteMemes: [
+    {type: Schema.Types.ObjectId, ref: "Meme"},
   ],
-  likedMemes: [
-    {},
-  ],
-  uploadedMemes: [
-    {},
-  ]
 }, {
   timestamps: {
     createdAt: 'created_at',
