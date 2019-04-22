@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+  
+  input[type="text"] {
+    width: 100%;
+    border: 2px solid rgb(65, 167, 180);
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+  
+.wrapper {
+  text-align: center;
+  top: 70px;
+}
+
+#loginButton {
+  position: absolute;
+  margin: ;
+
+}
+/*# sourceMappingURL=style.css.map */
