@@ -4,26 +4,12 @@ body {
 
 a {
   color: #00B7FF; }
-  
-  input[type="text"] {
-    width: 100%;
-    border: 2px solid rgb(65, 167, 180);
-    border-radius: 4px;
-    margin: 8px 0;
-    outline: none;
-    padding: 8px;
-    box-sizing: border-box;
-    transition: 0.3s;
-}
-  
-.wrapper {
-  text-align: center;
-  top: 70px;
-}
 
-#loginButton {
-  position: absolute;
-  margin: ;
 
+  #signupButton{
+    position:absolute;
+    bottom: 40%;
+    right:35%;
+    left:37%;
 }
 /*# sourceMappingURL=style.css.map */
