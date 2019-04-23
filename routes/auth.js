@@ -3,6 +3,7 @@ const passport = require('passport');
 const router = express.Router();
 const User = require("../models/User");
 const Meme = require("../models/Meme");
+const uploadCloud = require('../config/cloudinary.js');
 
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
@@ -64,6 +65,19 @@ router.post("/signup", (req, res, next) => {
 router.get("/profilePage", (req,res,next) => {
   res.render("profilePage")
 })
+
+// Meme upload Route
+router.post('/upload', uploadCloud.single('photo'), (req,res,next) => {
+  Meme.create({
+    name: req.body.name,
+    path: req.file.url,
+    picture: String,
+    description: String,
+  })
+    .then(() => {
+      res.redirect('/');
+    })
+});
 
 // Logout Route
 router.get("/logout", (req, res) => {
