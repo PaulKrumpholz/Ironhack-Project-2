@@ -15,8 +15,8 @@ const userSchema = new Schema({
   },
   password: String,
   profilePic: String,
-  _friends: {type: Schema.Types.ObjectId, ref: "User"},
-  _favouriteMemes: {type: Schema.Types.ObjectId, ref: "Meme"},
+  // _friends: [{type: Schema.Types.ObjectId, ref: "User"}],
+  _favouriteMemes:[{type: Schema.Types.ObjectId, ref: "Meme"}],
 }, {
   timestamps: {
     createdAt: 'created_at',

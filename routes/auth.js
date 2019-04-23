@@ -48,7 +48,7 @@ router.post("/signup", (req, res, next) => {
     const newUser = new User({
       email,
       username,
-      password: hashPass
+      password: hashPass,
     });
 
     newUser.save()
@@ -76,6 +76,17 @@ router.post('/upload', uploadCloud.single('photo'), (req,res,next) => {
   })
     .then(() => {
       res.redirect('/');
+    })
+});
+
+// Profile pic upload Route
+router.post('/profilePic', uploadCloud.single('photo'), (req,res,next) => {
+
+  User.findByIdAndUpdate(req.user._id, {
+    profilePic: req.file.url,
+  })
+    .then(() => {
+      res.redirect('/profilePage');
     })
 });
 
