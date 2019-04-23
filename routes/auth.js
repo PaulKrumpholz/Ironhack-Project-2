@@ -68,7 +68,6 @@ router.get("/profilePage", (req,res,next) => {
 
 // Meme upload Route
 router.post('/upload', uploadCloud.single('photo'), (req,res,next) => {
-  console.log("TCL: req.body", req.body);
   Meme.create({
     name: req.body.name,
     path: req.file.url,
@@ -76,7 +75,7 @@ router.post('/upload', uploadCloud.single('photo'), (req,res,next) => {
     description: String,
   })
     .then(() => {
-      res.redirect('mainfeed');
+      res.redirect('/');
     })
 });
 
