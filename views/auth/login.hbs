@@ -3,9 +3,11 @@
 
 <form action="/auth/login" method="POST" id="form-container">
 
-  <input id="username" type="text" name="username" placeholder="username">
+  <br><br>
 
+  <input id="username" type="text" name="username" placeholder="username or email">
 
+  <br><br>
 
   <input id="Password" type="text" name="password" placeholder="Your password">
   <br>
@@ -13,7 +15,8 @@
     <div class="error-message">{{ message }}</div>
   {{/if}}
   
-  
+  <br><br>
+
   <div class="wrapper">
   <button id="loginButton" type="submit" class="btn btn-outline-dark">Login</button>
 </div>
