@@ -16,14 +16,24 @@
 
   <nav>
     <div class="wrapper">
-      Logo
-      Name 
-      <input type="text" placeholder="Search...">
-      <a href="/mainfeed"><button type="button" class="btn btn-outline-dark">Feed</button></a>
-      <a href="/profilePage"><button type="button" class="btn btn-outline-dark">Profile</button></a>
-      <a href="/auth/login"><button type="button" class="btn btn-outline-dark">Login</button></a>
-      <a href="/auth/signup"><button type="button" class="btn btn-outline-dark">Sign Up</button></a>
-      <a href="/"><button type="button" class="btn btn-outline-dark">Logout</button></a>
+      <img src="../images/image.png" width="50" height="40">
+      <img src="../images/mymeme.png" width="50" height="40">
+
+      {{#if isConnected}}
+        <input type="text" placeholder="Search...">
+        <a href="/mainfeed"><button type="button" class="btn btn-outline-dark">Feed</button></a>
+        <a href="/profilePage"><button type="button" class="btn btn-outline-dark">Profile</button></a>
+      {{/if}}
+
+      {{#unless isConnected}}
+        <a href="/auth/signup"><button type="button" class="btn btn-outline-dark">Sign Up</button></a>
+        <a href="/auth/login"><button type="button" class="btn btn-outline-dark">Login</button></a>
+      {{/unless}}
+
+      {{#if isConnected}}
+        <a href="/auth/logout"><button type="button" class="btn btn-outline-dark">Logout</button></a>
+      {{/if}}
+
     </div> 
   </nav>
 
