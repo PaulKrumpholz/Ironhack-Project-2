@@ -5,11 +5,10 @@ body {
 a {
   color: #00B7FF; }
 
+#signupButton {
+  position: absolute;
+  bottom: 40%;
+  right: 35%;
+  left: 37%; }
 
-  #signupButton{
-    position:absolute;
-    bottom: 40%;
-    right:35%;
-    left:37%;
-}
 /*# sourceMappingURL=style.css.map */

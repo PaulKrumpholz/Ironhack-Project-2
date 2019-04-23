@@ -9,17 +9,19 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
 
+// Login Route
 router.get("/login", (req, res, next) => {
   res.render("auth/login", { "message": req.flash("error") });
 });
 
 router.post("/login", passport.authenticate("local", {
-  successRedirect: "/",
+  successRedirect: "/mainfeed",
   failureRedirect: "/auth/login",
   failureFlash: true,
   passReqToCallback: true
 }));
 
+// Signup Route
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
@@ -50,7 +52,7 @@ router.post("/signup", (req, res, next) => {
 
     newUser.save()
     .then(() => {
-      res.redirect("/");
+      res.redirect("/auth/login");
     })
     .catch(err => {
       res.render("auth/signup", { message: "Something went wrong" });
@@ -58,6 +60,12 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
+// Profile Page
+router.get("/profilePage", (req,res,next) => {
+  res.render("profilePage")
+})
+
+// Logout Route
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/");
