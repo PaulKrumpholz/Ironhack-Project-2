@@ -88,6 +88,11 @@ router.post('/profilePic', uploadCloud.single('photo'), (req,res,next) => {
     })
 });
 
+//Username Change Route
+router.post("/changeUsername", (req,res,next) => {
+
+})
+
 // Logout Route
 router.get("/logout", (req, res) => {
   req.logout();

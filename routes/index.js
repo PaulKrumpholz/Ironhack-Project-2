@@ -17,8 +17,11 @@ router.get("/mainfeed", (req, res, next) => {
 router.get("/profilePage", (req, res, next) => {
   Meme.find({_owner: req.user._id})
     .then( memes => {  
-      res.render("profilePage", { memes: memes, user: User });
-			console.log("TCL: User", User)
+      res.render("profilePage", { 
+        memes: memes,
+        user: req.user,
+      });
+      console.log("TCL: req.user", req.user)
     })
 })
 

@@ -1,8 +1,8 @@
 <div class="profile"> 
   <div class="user">
     <div class="userinfo">
-      <img src="{{this.profilePic}}" >
-      <p>{{this.username}}</p>
+      <img src="{{user.profilePic}}" >
+      <p><a href="/changeUsername">{{user.username}}</a></p>
       <form action="/auth/profilePic" method="POST" enctype="multipart/form-data">
       <input type="file" name="photo">
       <input type="submit" value="Submit">
@@ -16,5 +16,9 @@
     </article>
     <article>
        <p>Favorites</p>
+       {{#each user}}
+       <img src="{{__favouriteMemes}}" alt="">
+       {{/each}}
     </article>
+  </div>
 </div>
