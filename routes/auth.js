@@ -61,18 +61,16 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
-// Profile Page
-router.get("/profilePage", (req,res,next) => {
-  res.render("profilePage")
-})
-
 // Meme upload Route
 router.post('/upload', uploadCloud.single('photo'), (req,res,next) => {
   Meme.create({
     name: req.body.name,
     path: req.file.url,
-    picture: String,
-    description: String,
+    description: req.body.description,
+    _owner: req.user._id,
+    _likes: [],
+    _favorites: [],
+    _comments: [],
   })
     .then(() => {
       res.redirect('/');

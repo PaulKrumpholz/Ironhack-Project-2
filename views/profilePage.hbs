@@ -1,23 +1,20 @@
 <div class="profile"> 
   <div class="user">
     <div class="userinfo">
-      <img src="" >
-      <p>{{user.username}}</p>
+      <img src="{{this.profilePic}}" >
+      <p>{{this.username}}</p>
       <form action="/auth/profilePic" method="POST" enctype="multipart/form-data">
       <input type="file" name="photo">
       <input type="submit" value="Submit">
       </form>
     </div>
-    {{!-- <article>
-      <p>Friends</p>
-    </article> --}}
       <article>
-      <p>myMemes</p>
+       <p>myMemes</p>
+       {{#each memes}}
+        <img src="{{path}}">
+      {{/each}}
     </article>
-      <article>
-      <p>Favorites</p>
+    <article>
+       <p>Favorites</p>
     </article>
-  </div>
-  <div class="container">
-  </div>
 </div>
