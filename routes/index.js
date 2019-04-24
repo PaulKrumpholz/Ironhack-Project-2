@@ -34,8 +34,29 @@ router.get("/profilePage", (req, res, next) => {
 })
 
 router.get("/user/:userId", (req,res,next) => {
-  User.findById(req.params._id)
-    res.render("user")
-  })
+  User.findById(req.params.userId)
+  .then(user => {
+    res.render("user",{
+      user: user,
+    })
+  });
+})
+
+// Like Route
+router.get("/like", (req,res,next) => {
+  Meme.update()
+    .then()
+    res.redirect("/mainfeed")
+})
+
+// Favourite Route
+router.get("/favourite", (req,res,next) => {
+    res.redirect("/mainfeed")
+})
+
+// Comment Route
+router.get("/comment", (req,res,next) => {
+  res.redirect("/mainfeed")
+})
 
 module.exports = router;
