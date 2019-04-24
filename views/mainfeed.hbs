@@ -2,15 +2,16 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h2>Upload your Meme</h2>
-      <form action="/auth/upload" method="POST" enctype="multipart/form-data">
-        <input type="text" name="name" placeholder="Name of Meme...">
-        <br>
-        <input type="file" name="photo" class="btn btn-primary my-2">
+     
+      <form action="/auth/upload" id="Upload" method="POST" enctype="multipart/form-data">
+       
+        <input id="Meme-Name" type="text" name="name" placeholder="Name of Meme...">
         <br>
         <input type="text" name="description" placeholder="Meme Description...">
         <br>
-        <input type="submit" value="upload" class="btn btn-primary my-2">
+          <input type="file" id="description"name="photo" class="btn btn-primary my-2">
+         <br>
+         <input type="submit" value="Upload" class="btn btn-primary my-2"> 
       </form>
     </div>
   </section>
