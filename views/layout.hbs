@@ -21,17 +21,22 @@
 
       {{#if isConnected}}
         <input type="text" placeholder="Search...">
-        <a href="/mainfeed"><button type="button" class="btn btn-outline-light">Feed</button></a>
-        <a href="/profilePage"><button type="button" class="btn btn-outline-light">Profile</button></a>
+        <a href="/mainfeed"><button type="button" class="btn btn-outline-dark">Feed</button></a>
+        <a href="/profilePage"><button type="button" class="btn btn-outline-dark">Profile</button></a>
       {{/if}}
 
       {{#unless isConnected}}
+<<<<<<< HEAD
         <a href="/auth/signup"><button id="" type="button" class="btn btn-outline-light">Sign Up</button></a>
         <a href="/auth/login"><button type="button" class="btn btn-outline-light">Login</button></a>
+=======
+        <a href="/auth/signup"><button type="button" class="btn btn-outline-dark">Sign Up</button></a>
+        <a href="/auth/login"><button type="button" class="btn btn-outline-dark">Login</button></a>
+>>>>>>> ca60e134caa093c4f504bbb642d9e5a95765160a
       {{/unless}}
 
       {{#if isConnected}}
-        <a href="/auth/logout"><button type="button" class="btn btn-outline-light">Logout</button></a>
+        <a href="/auth/logout"><button type="button" class="btn btn-outline-dark">Logout</button></a>
       {{/if}}
 
     </div> 
