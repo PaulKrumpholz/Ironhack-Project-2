@@ -10,7 +10,13 @@ router.get('/', (req, res, next) => {
 
 /* GET mainfeed page */
 router.get("/mainfeed", (req, res, next) => {
-  res.render("mainfeed");
+  Meme.find()
+    .populate("_owner")
+    .then( memes => {  
+      res.render("mainfeed", { 
+        memes: memes,
+      });
+    })
 })
 
 /* GET profilePage page */
@@ -21,8 +27,12 @@ router.get("/profilePage", (req, res, next) => {
         memes: memes,
         user: req.user,
       });
-      console.log("TCL: req.user", req.user)
     })
 })
+
+router.get("/user/:userId", (req,res,next) => {
+  User.findById(req.params._id)
+    res.render("user")
+  })
 
 module.exports = router;
