@@ -26,6 +26,12 @@ span {
   border: 1px solid black;
   width: 300px;
   height: 652px;
-  margin-top: 89px; }
+  margin-top: 89px; 
+  background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+}
+
+  body {
+    background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+  }
 
 /*# sourceMappingURL=style.css.map */
