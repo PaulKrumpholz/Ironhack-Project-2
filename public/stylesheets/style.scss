@@ -8,9 +8,10 @@
   flex-direction: column;
 }
 article {
+  text-align: center;
   border: 1px black solid;
-  width: 200px;
-  height: 200px;
+  width: 600px;
+  height: 500px;
   margin: 10px;
 }
 img {
@@ -22,9 +23,10 @@ span {
   height: 10px;
   margin: 10px;
 }
-.container {
-  border: 1px solid black;
-  width: 300px;
-  height: 652px;
-  margin-top: 89px;
+
+.test {
+display: flex;
+justify-content: center;
+align-items: center
+
 }
