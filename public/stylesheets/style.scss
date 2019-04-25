@@ -1,4 +1,10 @@
- @import "../../node_modules/bootstrap/scss/bootstrap"; 
+.red {
+  color: red;
+}
+
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap"; 
 
 .profile {
   display: flex;
