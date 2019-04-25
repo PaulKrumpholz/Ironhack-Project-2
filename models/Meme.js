@@ -9,8 +9,8 @@ const memeSchema = new Schema({
   _likes: [{type: Schema.Types.ObjectId, ref: "User"}],
   _favorites: [{type: Schema.Types.ObjectId, ref: "User"}],
   _comments: [{
-    type: String,
-    type: Schema.Types.ObjectId, ref: "User"
+    text: String, 
+    _commentOwner: Schema.Types.ObjectId,
   }]
 }, {
   timestamps: {

@@ -1,16 +1,15 @@
 
-
-
 <form action="/auth/login" method="POST" id="form-container">
 
   <br><br>
 
-  <input id="username" type="text" name="username" placeholder="username or email">
+  <input id="username" type="text" name="username" placeholder="Username or mail">
 
   <br><br>
 
-  <input id="Password" type="text" name="password" placeholder="Your password">
-  <br>
+  <input type="password" name="password" id="myPassword" size="20" placeholder="Password" />
+  <i class="far fa-eye"onmouseover="mouseoverPass();" onmouseout="mouseoutPass();"></i>
+  <br><br>
   {{#if message }}
     <div class="error-message">{{ message }}</div>
   {{/if}}

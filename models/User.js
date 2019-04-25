@@ -15,7 +15,6 @@ const userSchema = new Schema({
   },
   password: String,
   profilePic: String,
-  _favouriteMemes:[{type: Schema.Types.ObjectId, ref: "Meme"}],
 }, {
   timestamps: {
     createdAt: 'created_at',

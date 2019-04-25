@@ -10,6 +10,9 @@ router.get('/', (req, res, next) => {
 
 /* GET mainfeed page */
 router.get("/mainfeed", (req, res, next) => {
+const date = new Date()
+const hours = date.getHours()
+console.log(hours)
   Meme.find()
     .populate("_owner")
     .then( memes => {  
@@ -40,19 +43,35 @@ router.get("/user/:userId", (req,res,next) => {
 })
 
 // Like Route
-router.get("/like", (req,res,next) => {
-  Meme.update()
-    .then()
-    res.redirect("/mainfeed")
+router.get("/like/:memeId", (req,res,next) => {
+    let likes = [req.user._id];
+    Meme.findById(req.params.memeId, {_likes: 1})
+     .then(meme => {
+       meme._likes = likes.concat(meme._likes);
+       meme.save()
+      })
+      res.redirect("/mainfeed")
 })
 
 // Favourite Route
-router.get("/favourite", (req,res,next) => {
+router.get("/favourite/:memeId", (req,res,next) => {
+    let favourites = [req.user._id];
+    Meme.findById(req.params.memeId, {_favorites: 1})
+      .then(favourite => {
+        favourite._favorites = favourites.concat(favourite._favorites);
+        favourite.save()
+      })
     res.redirect("/mainfeed")
 })
 
 // Comment Route
-router.get("/comment", (req,res,next) => {
+router.post("/comment/:memeId", (req,res,next) => {
+  let comments = [{text: req.body.comment,  _commentOwner: req.user._id}];
+  Meme.findById(req.params.memeId, {_comments: 1})
+    .then(comment => {
+      comment._comments = comments.concat(comment._comments);
+      comment.save()
+    })
   res.redirect("/mainfeed")
 })
 
