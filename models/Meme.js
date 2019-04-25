@@ -10,7 +10,7 @@ const memeSchema = new Schema({
   _favorites: [{type: Schema.Types.ObjectId, ref: "User"}],
   _comments: [{
     text: String, 
-    _commentOwner: Schema.Types.ObjectId,
+    _commentOwner: {type: Schema.Types.ObjectId, ref: "User"},
   }]
 }, {
   timestamps: {
