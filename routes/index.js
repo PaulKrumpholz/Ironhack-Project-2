@@ -14,7 +14,6 @@ router.get("/mainfeed", (req, res, next) => {
   .populate("_owner")
   .populate("_comments._commentOwner")
   .then( memes => {
-		console.log("TCL: memes.comments", memes[0]._comments)
     res.render("mainfeed", { 
       memes: memes,
     });

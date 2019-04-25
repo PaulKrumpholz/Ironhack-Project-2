@@ -77,16 +77,6 @@ require('./passport')(app);
 app.use((req,res,next) => {
   // Define a view variable named `isConnected`
   res.locals.isConnected = !!req.user
-	console.log("TCL: req.user", req.user)
-	console.log("TCL: res.locals.isConnected", res.locals.isConnected)
-
-  
-
-  // Define a view variable named `connectedUser`
-  //app.res.locals.isAdmin = req.user && req.user.role === 'ADMIN'
-
-  // Define a view variable named `isConnected`
-  // res.locals.isConnected = req.user && req.user.role === 'LOGED_IN'
   next()
 })
 
