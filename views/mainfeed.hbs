@@ -29,13 +29,13 @@
                     <input type="text" placeholder="Enter your comment..." id="comment" name="comment">
                     <input type="submit" value="Comment" class="btn btn-sm btn-outline-secondary">                
                   </form>
-                  <a href="/like/{{_id}}" class="btn btn-sm btn-outline-secondary">Like</a>
+                  <a href="/like/{{_id}}" class="btn btn-sm btn-outline-secondary">{{_likes.length}} Likes</a>
                   <a href="/favourite/{{_id}}" class="btn btn-sm btn-outline-secondary">Favourite</a>
-                  {{#each comments}}
                   <ul>
-                    <li>{{_commentOwner}}: {{text}}</li>
-                  </ul>
+                  {{#each _comments}}
+                    <li>{{_commentOwner.username}}: {{text}}</li>
                   {{/each}}
+                  </ul>
                 </div>
               </div>
             </div>
