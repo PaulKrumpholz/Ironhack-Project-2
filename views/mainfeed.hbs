@@ -13,17 +13,15 @@
       </form>
     </div>
   </section>
-
   {{#each memes}}
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <p class="card-text"><a href="/user/{{_owner._id}}">{{_owner.username}}</a></p>              
-            <img src="{{path}}" class="img-fluid"  width="100%" height="225"/>
             <div class="card-body">
-              <p class="card-text">{{name}}</p>              
+            <p class="card-text"><a href="/user/{{_owner._id}}">{{_owner.username}}</a></p>              
+            <img src="{{path}}" class="img-fluid"  width="100%" height="225"/>        
               <p class="card-text">{{description}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -31,8 +29,13 @@
                     <input type="text" placeholder="Enter your comment..." id="comment" name="comment">
                     <input type="submit" value="Comment" class="btn btn-sm btn-outline-secondary">                
                   </form>
-                  <a href="/like/{{_id}}" class="btn btn-sm btn-outline-secondary">Like</a>
+                  <a href="/like/{{_id}}" class="btn btn-sm btn-outline-secondary">{{_likes.length}} Likes</a>
                   <a href="/favourite/{{_id}}" class="btn btn-sm btn-outline-secondary">Favourite</a>
+                  <ul>
+                  {{#each _comments}}
+                    <li>{{_commentOwner.username}}: {{text}}</li>
+                  {{/each}}
+                  </ul>
                 </div>
               </div>
             </div>

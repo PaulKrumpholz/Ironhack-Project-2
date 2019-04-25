@@ -1,3 +1,6 @@
+.red {
+  color: red; }
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7023,6 +7026,7 @@ a.text-dark:hover, a.text-dark:focus {
 .profile {
   display: flex;
   justify-content: space-around; }
+<<<<<<< HEAD
 
 .userinfo {
   display: flex;
@@ -14800,6 +14804,8 @@ legend {
 
 .alert-success {
   background-color: #62c462; }
+=======
+>>>>>>> 6630270ca398a8b21fb8b92ac398c5e47d52b334
 
 .alert-info {
   background-color: #5bc0de; }
