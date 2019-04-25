@@ -14,10 +14,10 @@ function mouseoutPassLogin(obj) {
 }
 
 function mouseoverPassSignup(obj) {
-  var obj = document.getElementById('passwordSignup');
+  var obj = document.getElementById('myPasswordSignup');
   obj.type = "text";
 }
 function mouseoutPassSignup(obj) {
-  var obj = document.getElementById('passwordSignup');
+  var obj = document.getElementById('myPasswordSignup');
   obj.type = "password";
 }
