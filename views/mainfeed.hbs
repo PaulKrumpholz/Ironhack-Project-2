@@ -4,14 +4,12 @@
     <div class="container">
      
       <form action="/auth/upload" id="Upload" method="POST" enctype="multipart/form-data">
-       
-        <input id="Meme-Name" type="text" name="name" placeholder="Name of Meme...">
-        <br>
+
         <input type="text" name="description" placeholder="Meme Description...">
         <br>
-          <input type="file" id="description"name="photo" class="btn btn-primary my-2">
-         <br>
-         <input type="submit" value="Upload" class="btn btn-primary my-2"> 
+        <input type="file" id="description"name="photo" class="btn btn-primary my-2">
+        <br>
+        <input type="submit" value="Upload" class="btn btn-primary my-2"> 
       </form>
     </div>
   </section>
@@ -29,9 +27,12 @@
               <p class="card-text">{{description}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
+                  <form action="/comment/{{_id}}" method="POST">
+                    <input type="text" placeholder="Enter your comment..." id="comment" name="comment">
+                    <input type="submit" value="Comment" class="btn btn-sm btn-outline-secondary">                
+                  </form>
                   <a href="/like/{{_id}}" class="btn btn-sm btn-outline-secondary">Like</a>
-                  <a href="/favourite" class="btn btn-sm btn-outline-secondary">Favourite</a>
-                  <a href="/comment" class="btn btn-sm btn-outline-secondary">Comment</a>                  
+                  <a href="/favourite/{{_id}}" class="btn btn-sm btn-outline-secondary">Favourite</a>
                 </div>
               </div>
             </div>

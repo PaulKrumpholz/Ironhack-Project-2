@@ -54,12 +54,24 @@ router.get("/like/:memeId", (req,res,next) => {
 })
 
 // Favourite Route
-router.get("/favourite", (req,res,next) => {
+router.get("/favourite/:memeId", (req,res,next) => {
+    let favourites = [req.user._id];
+    Meme.findById(req.params.memeId, {_favorites: 1})
+      .then(favourite => {
+        favourite._favorites = favourites.concat(favourite._favorites);
+        favourite.save()
+      })
     res.redirect("/mainfeed")
 })
 
 // Comment Route
-router.get("/comment", (req,res,next) => {
+router.post("/comment/:memeId", (req,res,next) => {
+  let comments = [{text: req.body.comment,  _commentOwner: req.user._id}];
+  Meme.findById(req.params.memeId, {_comments: 1})
+    .then(comment => {
+      comment._comments = comments.concat(comment._comments);
+      comment.save()
+    })
   res.redirect("/mainfeed")
 })
 
