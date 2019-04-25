@@ -30,7 +30,7 @@
                     <input type="submit" value="Comment" class="btn btn-sm btn-outline-secondary">                
                   </form>
                   <a href="/like/{{_id}}" class="btn btn-sm btn-outline-secondary">{{_likes.length}} Likes</a>
-                  <a href="/favourite/{{_id}}" class="btn btn-sm btn-outline-secondary">{{_favorites.length}} Favourite</a>
+                  <a href="/favourite/{{_id}}" class="btn btn-sm btn-outline-primary">{{_favorites.length}} Favourite</a>
                   <ul>
                   {{#each _comments}}
                     <li>{{_commentOwner.username}}: {{text}}</li>
