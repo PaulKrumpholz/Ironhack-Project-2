@@ -1,11 +1,4 @@
-.red {
-  color: red;
-}
-
-
-
 @import "../../node_modules/bootstrap/scss/bootstrap"; 
-
 .profile {
   display: flex;
   justify-content: space-around;
@@ -31,32 +24,20 @@ span {
   height: 10px;
   margin: 10px;
 }
-
 body {
   background-color: rgb(250, 251, 252)  !important;
   font-family: Circular,Helvetica,Arial,sans-serif !important;
 }
-
-
 .container {
   display: flex;
   justify-content: space-around;
-  
-
-
 }
-
-
-
 .card-text{
   text-align: center;
   width: 550px;
   margin: 0px 0px 0px 40px ;
   padding: 0px
 }
-
-
-
 .card-body{
   text-align: center;
   border: 1px black solid;
@@ -64,11 +45,10 @@ body {
   height: 700px;
   margin: 10px;
 }
-
-
 .Meme-Name{
   margin:0px auto;
   bottom: 10px
 }
-
-
+body {
+  background-image: url("/images/index.jpg");
+}

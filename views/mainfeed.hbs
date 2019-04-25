@@ -29,8 +29,8 @@
                     <input type="text" placeholder="Enter your comment..." id="comment" name="comment">
                     <input type="submit" value="Comment" class="btn btn-sm btn-outline-secondary">                
                   </form>
-                  <a href="/like/{{_id}}" class="btn btn-sm btn-outline-secondary">{{_likes.length}} Likes</a>
-                  <a href="/favourite/{{_id}}" class="btn btn-sm btn-outline-primary">{{_favorites.length}} Favourite</a>
+                  <a href="/like/{{_id}}"><img src="/images/like.png" height="32" width="32"> {{_likes.length}}</a>
+                  <a href="/favourite/{{_id}}"><img src="/images/star.png" height="32" width="32"></img>{{_favorites.length}}</a>
                   <ul>
                   {{#each _comments}}
                     <li>{{_commentOwner.username}}: {{text}}</li>
