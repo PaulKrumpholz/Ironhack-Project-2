@@ -3,12 +3,13 @@
 
   <br><br>
 
-  <input id="username" type="text" name="username" placeholder="Username or mail">
+  <input id="username" type="text" name="username" placeholder="username or email">
 
   <br><br>
 
-  <input type="password" name="password" id="myPassword" size="20" placeholder="Password" />
-  <i class="far fa-eye"onmouseover="mouseoverPass();" onmouseout="mouseoutPass();"></i>
+  <input type="password" name="password" id="myPasswordLogin" size="20" placeholder="Password" />
+ <i class="fas fa-eye"  onmouseover="mouseoverPassLogin();" onmouseout="mouseoutPassLogin();"></i>
+
   <br><br>
   {{#if message }}
     <div class="error-message">{{ message }}</div>

@@ -4,11 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }, false);
 
-function mouseoverPass(obj) {
-  var obj = document.getElementById('myPassword');
+function mouseoverPassLogin(obj) {
+  var obj = document.getElementById('myPasswordLogin');
   obj.type = "text";
 }
-function mouseoutPass(obj) {
-  var obj = document.getElementById('myPassword');
+function mouseoutPassLogin(obj) {
+  var obj = document.getElementById('myPasswordLogin');
+  obj.type = "password";
+}
+
+function mouseoverPassSignup(obj) {
+  var obj = document.getElementById('passwordSignup');
+  obj.type = "text";
+}
+function mouseoutPassSignup(obj) {
+  var obj = document.getElementById('passwordSignup');
   obj.type = "password";
 }

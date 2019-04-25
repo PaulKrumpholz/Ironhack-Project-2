@@ -15,7 +15,8 @@
   <br><br>
 
   <label for="password">Password</label>
-  <input id="password" type="text" name="password" placeholder="Your password">
+  <input id="passwordSignup" type="password" name="password" placeholder="Your password">
+   <i class="fas fa-eye"  onmouseover="mouseoverPassSignup();" onmouseout="mouseoutPassSignup();"></i>
   <br>
   {{#if message }}
     <div class="error-message">{{ message }}</div>
