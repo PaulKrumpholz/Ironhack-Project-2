@@ -8,7 +8,7 @@
   <title>{{title}}</title>
 
   {{!-- CSS  --}}
-  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
   {{!-- Bootstap CSS --}}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -26,8 +26,13 @@
       {{/if}}
 
       {{#unless isConnected}}
+<<<<<<< HEAD
+        <a href="/auth/signup"><button id="" type="button" class="btn btn-outline-light">Sign Up</button></a>
+        <a href="/auth/login"><button type="button" class="btn btn-outline-light">Login</button></a>
+=======
         <a href="/auth/signup"><button type="button" class="btn btn-outline-dark">Sign Up</button></a>
         <a href="/auth/login"><button type="button" class="btn btn-outline-dark">Login</button></a>
+>>>>>>> ca60e134caa093c4f504bbb642d9e5a95765160a
       {{/unless}}
 
       {{#if isConnected}}
