@@ -3,12 +3,22 @@
 
   <br><br>
 
-  <input id="username" type="text" name="username" placeholder="username">
+<!-- Material input -->
+<div class="md-form">
+  <i class="fas fa-user prefix"></i>
+  <input type="text" id="inputIconEx2" class="form-control" placeholder="Email or Username" style="width: 160px;">
+  <label for="inputIconEx2"></label>
+</div>
+  
 
   <br><br>
-
-  <input type="password" name="password" id="myPasswordLogin" size="20" placeholder="Password" />
- <i class="fas fa-eye"  onmouseover="mouseoverPassLogin();" onmouseout="mouseoutPassLogin();"></i>
+<!-- Material input -->
+<div class="md-form">
+  <i class="fas fa-lock prefix"></i>
+  <input type="password" id="myPasswordLogin" class="form-control validate" placeholder="Password" style="width: 160px;">
+  <i class="fas fa-eye" onmouseover="mouseoverPassLogin();" onmouseout="mouseoutPassLogin();"></i>
+  <label for="myPasswordLogin" data-error="wrong" data-success="right"></label>
+  </div>
 
   <br><br>
   {{#if message }}
