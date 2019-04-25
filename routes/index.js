@@ -10,17 +10,15 @@ router.get('/', (req, res, next) => {
 
 /* GET mainfeed page */
 router.get("/mainfeed", (req, res, next) => {
-const date = new Date()
-const hours = date.getHours()
-console.log(hours)
   Meme.find()
-    .populate("_owner")
-    .then( memes => {  
-      res.render("mainfeed", { 
-        memes: memes,
-      });
-    })
+  .populate("_owner")
+  .then( memes => {
+    res.render("mainfeed", { 
+      memes: memes,
+    });
+  })
 })
+
 
 /* GET profilePage page */
 router.get("/profilePage", (req, res, next) => {
