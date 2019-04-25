@@ -40,10 +40,14 @@ router.get("/user/:userId", (req,res,next) => {
 })
 
 // Like Route
-router.get("/like", (req,res,next) => {
-  Meme.update()
-    .then()
-    res.redirect("/mainfeed")
+router.get("/like/:memeId", (req,res,next) => {
+    let likes = [req.user._id];
+    Meme.findById(req.params.memeId, {_likes: 1})
+     .then(meme => {
+       meme._likes = likes.concat(meme._likes);
+       meme.save()
+      })
+      res.redirect("/mainfeed")
 })
 
 // Favourite Route
