@@ -65,13 +65,14 @@ router.get("/like/:memeId", (req, res, next) => {
 // Favourite Route
 router.get("/favourite/:memeId", (req,res,next) => {
   // TODO: only 1 favourite per user
-  let favourites = [req.user._id];
   Meme.findById(req.params.memeId, {_favorites: 1})
     .then(favourite => {
-      favourite._favorites = favourites.concat(favourite._favorites);
+      favourite._favorites.push(req.user._id);
       favourite.save()
+        .then(() => {
+          res.redirect("/mainfeed")
+        })
     })
-  res.redirect("/mainfeed")
 })
 
 // Comment Route

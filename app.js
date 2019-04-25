@@ -61,7 +61,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
   
 
 // default value for title local
-app.locals.title = 'myMeme';
+app.locals.title = 'myMemes';
 
 
 // Enable authentication using session + passport

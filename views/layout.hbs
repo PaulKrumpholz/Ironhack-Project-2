@@ -20,13 +20,14 @@
       <img src="/images/mymeme.png" width="50" height="40">
 
       {{#if isConnected}}
+      
         <a href="/mainfeed"><button type="button" class="btn btn-secondary">Feed</button></a>
         <a href="/profilePage"><button type="button" class="btn btn-secondary">Profile</button></a>
       {{/if}}
 
       {{#unless isConnected}}
         <a href="/auth/signup"><button type="button" class="btn btn-success ">Sign Up</button></a>
-        <a href="/auth/login"><button type="button" class="btn btn-primary">Login</button></a>
+        <a href="/auth/login"><button type="button" class="btn btn-secondary">Login</button></a>
       {{/unless}}
 
       {{#if isConnected}}
