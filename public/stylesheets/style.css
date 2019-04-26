@@ -3568,7 +3568,7 @@ input[type="button"].btn-block {
     .jumbotron {
       padding: 4rem 2rem; } }
 
-.jumbotron-fluid {
+.jumbotron-fluid   {
   padding-right: 0;
   padding-left: 0;
   border-radius: 0; }
