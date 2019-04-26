@@ -1,19 +1,19 @@
 <div class="profile"> 
   <div class="user">
     <div class="userinfo">
-      <img src="{{user.profilePic}}" >
-      <p>{{user.username}}</p>
+      <img src="{{user.profilePic}}" class="rounded mx-auto d-block rounded-circle">
+      <p class="font-weight-bold text-white">{{user.username}}</p>
     </div>
+      <p class="font-weight-bold text-white">myMemes</p>
       <article>
-      <p>myMemes</p>
       {{#each memes}}
-      <img src="{{path}}">
+      <img src="{{path}}" class="rounded">
       {{/each}}
     </article>
+      <p class="font-weight-bold text-white">Favorites</p>
     <article>
-      <p>Favorites</p>
       {{#each user}}
-      <img src="{{__favouriteMemes}}" alt="">
+      <img src="{{__favouriteMemes}}" class="rounded">
       {{/each}}
     </article>
   </div>

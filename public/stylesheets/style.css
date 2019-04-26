@@ -55,7 +55,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
+  text-align: center;
   background-color: #fff; }
 
 [tabindex="-1"]:focus {
@@ -3182,9 +3182,30 @@ input[type="button"].btn-block {
       color: #fff; }
 
 .card {
-  position: relative;
   display: flex;
+  justify-content: center;
+  align-content: center;
   flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem; }
+  .card > hr {
+    margin-right: 0;
+    margin-left: 0; }
+  .card > .list-group:first-child .list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; }
+  .card > .list-group:last-child .list-group-item:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem; }
+
+.card-2 {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 30vh;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
@@ -7350,9 +7371,6 @@ legend {
 
 article {
   text-align: center;
-  border: 1px black solid;
-  width: 600px;
-  height: 500px;
   margin: 10px; }
 
 img {
@@ -7385,25 +7403,30 @@ body {
   height: 700px;
   margin: 10px; }
 
+.card-body-2 {
+  text-align: center;
+  margin: 10px; }
+
 .Meme-Name {
   margin: 0px auto;
   bottom: 10px; }
 
 body {
-  background-image: url("/images/index.jpg"); }
+  background-image: url("/images/index.png"); }
 
 #myPasswordLogin {
-  background-color: #212121;
+  background-color: #343a40;
   color: white; }
 
 #inputIconEx2 {
-  background-color: #212121;
+  background-color: #343a40;
   color: white; }
 
 #myPasswordSignup {
   background-color: #212121;
   color: white; }
 
+<<<<<<< HEAD
   .detailBox {
     width:80%;
     border:1px solid #bbb;
@@ -7476,5 +7499,12 @@ body {
 } */
 
 
+=======
+.loginContainer {
+  border-color: aquamarine 15px;
+  background-color: aliceblue;
+  width: 400px;
+  height: 300px; }
+>>>>>>> 72bf8f71122f69e7b34b4c12aa5a26a120b727ad
 
 /*# sourceMappingURL=style.css.map */
