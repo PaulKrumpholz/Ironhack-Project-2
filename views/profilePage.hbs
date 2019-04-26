@@ -1,23 +1,23 @@
 <div class="profile"> 
   <div class="user">
     <div class="userinfo">
-      <img src="{{user.profilePic}}" >
-      <p>{{user.username}}</p>
+      <img src="{{user.profilePic}}" class="rounded mx-auto d-block rounded-circle">
+      <p class="font-weight-bold text-white">{{user.username}}</p>
       <form action="/auth/profilePic" method="POST" enctype="multipart/form-data">
-      <input type="file" name="photo">
-      <input type="submit" value="Submit">
+        <input type="file" class="btn btn-dark" name="photo">
+        <input type="submit" class="btn btn-dark" value="Submit">
       </form>
     </div>
-      <article>
-       <p>myMemes</p>
-       {{#each memes}}
-        <img src="{{path}}">
+    <p class="font-weight-bold text-white">my Memes</p>
+    <article>
+      {{#each memes}}
+        <img src="{{path}}" class="rounded">
       {{/each}}
     </article>
+    <p class="font-weight-bold text-white">Favorites</p>
     <article>
-       <p>Favorites</p>
        {{#each favoriteMemes}}
-        <img src="{{path}}">
+        <img src="{{path}}" class="rounded">
        {{/each}}
     </article>
   </div>
