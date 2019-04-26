@@ -3182,8 +3182,9 @@ input[type="button"].btn-block {
       color: #fff; }
 
 .card {
-  position: relative;
   display: flex;
+  justify-content: center;
+  align-content: center;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
@@ -3204,8 +3205,7 @@ input[type="button"].btn-block {
 .card-2 {
   display: inline-flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  margin-top: 30vh;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
@@ -3221,7 +3221,7 @@ input[type="button"].btn-block {
   .card > .list-group:last-child .list-group-item:last-child {
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem; }
-    
+
 .card-body {
   flex: 1 1 auto;
   padding: 1.25rem; }
@@ -7089,7 +7089,6 @@ body {
 
 .card-body-2 {
   text-align: center;
-  border: 1px black solid;
   margin: 10px; }
 
 .Meme-Name {
