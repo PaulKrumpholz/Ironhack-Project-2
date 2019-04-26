@@ -28,6 +28,7 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.post("/signup", (req, res, next) => {
+  console.log("bdcjhc")
   const username = req.body.username;
   const password = req.body.password;
   if (username === "" || password === "") {
@@ -54,6 +55,7 @@ router.post("/signup", (req, res, next) => {
       res.redirect("/auth/login");
     })
     .catch(err => {
+			console.log("TCL: err", err)
       res.render("auth/signup", { message: "Something went wrong" });
     })
   });

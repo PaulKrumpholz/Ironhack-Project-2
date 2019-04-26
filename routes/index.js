@@ -54,6 +54,12 @@ router.get("/like/:memeId", (req, res, next) => {
   // TODO: only 1 like per user
   Meme.findById(req.params.memeId, { _likes: 1 })
     .then(meme => {
+      for (let i = 0; i < meme._likes.length; i++) {
+        if(meme._likes[i].equals(req.user._id)) {
+          res.redirect("/mainfeed")
+          return
+        }
+      }
       meme._likes.push(req.user._id)
       meme.save()
         .then(() => {
@@ -67,6 +73,11 @@ router.get("/favourite/:memeId", (req,res,next) => {
   // TODO: only 1 favourite per user
   Meme.findById(req.params.memeId, {_favorites: 1})
     .then(favourite => {
+      for (let i = 0; i < favourite._favorites.length; i++) {
+        if(favourite._favorites[i].equals(req.user._id)) {
+          res.redirect("/mainfeed")
+        }
+      }
       favourite._favorites.push(req.user._id);
       favourite.save()
         .then(() => {

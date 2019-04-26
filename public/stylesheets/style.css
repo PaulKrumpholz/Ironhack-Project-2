@@ -7392,6 +7392,7 @@ body {
 body {
   background-image: url("/images/index.jpg"); }
 
+<<<<<<< HEAD
 /*# sourceMappingURL=style.css.map */
 
 
@@ -7406,3 +7407,18 @@ body {
 .btn-group a {
   height: 45px;
 }
+=======
+#myPasswordLogin {
+  background-color: #212121;
+  color: white; }
+
+#inputIconEx2 {
+  background-color: #212121;
+  color: white; }
+
+#myPasswordSignup {
+  background-color: #212121;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 09b4cf629b32cacea5f1516ea53c45cf4e7be900
