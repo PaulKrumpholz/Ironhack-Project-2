@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <label class="card-body">
             <p class="card-text"><a href="/user/{{_owner._id}}">{{_owner.username}}</a></p>              
             <img src="{{path}}" class="img-fluid"  width="100%" height="225"/>        
               <p class="card-text">{{description}}</p>
@@ -31,13 +31,31 @@
                   </form>
                   <a href="/like/{{_id}}" style="height: 50px"><img src="/images/like.png" height="32" width="32"> {{_likes.length}}</a>
                   <a href="/favourite/{{_id}}"style="height: 50px"><img src="/images/star.png" height="32" width="32"></img>{{_favorites.length}}</a>
-                  <ul>
-                  {{#each _comments}}
-                    <li class="list">{{_commentOwner.username}}: {{text}}</li>
-                  {{/each}}
-                  </ul>
+                  
                 </div>
+               
               </div>
+               <div class="detailBox">
+    <div class="titleBox">
+      <label>Comments</label>
+    </div>
+    <div class="commentBox">
+        
+        <p class="taskDescription">We only want your coolest comments</p>
+    </div>
+    <div class="actionBox">
+        <ul class="commentList">
+                   {{#each _comments}}
+                     <li>{{_commentOwner.username}}: {{text}}</li>
+                   {{/each}}
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                    </div>
+                   </div>
+                  </ul>
             </div>
           </div>
         </div>  
