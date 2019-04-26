@@ -55,7 +55,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
+  text-align: center;
   background-color: #fff; }
 
 [tabindex="-1"]:focus {
@@ -3185,6 +3185,27 @@ input[type="button"].btn-block {
   position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem; }
+  .card > hr {
+    margin-right: 0;
+    margin-left: 0; }
+  .card > .list-group:first-child .list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; }
+  .card > .list-group:last-child .list-group-item:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem; }
+
+.card-2 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
@@ -7064,6 +7085,11 @@ body {
   border: 1px black solid;
   width: 600px;
   height: 700px;
+  margin: 10px; }
+
+.card-body-2 {
+  text-align: center;
+  border: 1px black solid;
   margin: 10px; }
 
 .Meme-Name {
