@@ -7052,9 +7052,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 article {
   text-align: center;
-  border: 1px black solid;
-  width: 600px;
-  height: 500px;
   margin: 10px; }
 
 img {
