@@ -21,20 +21,22 @@
           <div class="card mb-4 shadow-sm">
             <label class="card-body">
             <p class="card-text"><a href="/user/{{_owner._id}}">{{_owner.username}}</a></p>              
-            <img src="{{path}}" class="img-fluid"  width="100%" height="225"/>        
+            <img src="{{path}}" class="img-fluid"  width="100%" height="425"/>        
               <p class="card-text">{{description}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <form action="/comment/{{_id}}" method="POST">
+                   <form action="/comment/{{_id}}" method="POST">
                     <input type="text" placeholder="Enter your comment..." id="comment" name="comment">
                     <input type="submit" value="Comment" class="btn btn-sm btn-outline-secondary">                
                   </form>
-                  <a href="/like/{{_id}}" style="height: 50px"><img src="/images/like.png" height="32" width="32"> {{_likes.length}}</a>
-                  <a href="/favourite/{{_id}}"style="height: 50px"><img src="/images/star.png" height="32" width="32"></img>{{_favorites.length}}</a>
-                  
+                  <div class="superButtons">
+                    <a href="/like/{{_id}}" style="height: 50px"><img src="/images/like.png" height="32" width="32"> {{_likes.length}}</a>
+                    <a href="/favourite/{{_id}}"style="height: 50px"><img src="/images/star.png" height="32" width="32"></img>{{_favorites.length}}</a>
+                  </div>
                 </div>
                
               </div>
+              
                <div class="detailBox">
     <div class="titleBox">
       <label>Comments</label>

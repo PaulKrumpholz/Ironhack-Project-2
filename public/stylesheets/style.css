@@ -55,7 +55,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: center;
+  text-align: left;
   background-color: #fff; }
 
 [tabindex="-1"]:focus {
@@ -3182,30 +3182,9 @@ input[type="button"].btn-block {
       color: #fff; }
 
 .card {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-content: center;
   flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem; }
-  .card > hr {
-    margin-right: 0;
-    margin-left: 0; }
-  .card > .list-group:first-child .list-group-item:first-child {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem; }
-  .card > .list-group:last-child .list-group-item:last-child {
-    border-bottom-right-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem; }
-
-.card-2 {
-  display: inline-flex;
-  flex-direction: column;
-  margin-top: 30vh;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
@@ -7371,6 +7350,9 @@ legend {
 
 article {
   text-align: center;
+  border: 1px black solid;
+  width: 600px;
+  height: 500px;
   margin: 10px; }
 
 img {
@@ -7405,6 +7387,7 @@ body {
 
 .card-body-2 {
   text-align: center;
+  border: 1px black solid;
   margin: 10px; }
 
 .Meme-Name {
@@ -7426,85 +7409,16 @@ body {
   background-color: #212121;
   color: white; }
 
-<<<<<<< HEAD
-  .detailBox {
-    width:80%;
-    border:1px solid #bbb;
-    margin:50px;
-}
-.titleBox {
-    background-color:#fdfdfd;
-    padding:10px;
-}
-.titleBox label{
-  color:#444;
-  margin:0;
-  display:inline-block;
-}
-
-.commentBox {
-    padding:10px;
-    border-top:1px dotted #bbb;
-}
-.commentBox .form-group:first-child, .actionBox .form-group:first-child {
-    width:80%;
-}
-.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
-    width:18%;
-}
-.actionBox .form-group * {
-    width:100%;
-}
-.taskDescription {
-    margin-top:10px 0;
-}
-.commentList {
-    padding:0;
-    list-style:none;
-    max-height:200px;
-    overflow:auto;
-}
-.commentList li {
-    margin:0;
-    margin-top:10px;
-}
-.commentList li > div {
-    display:table-cell;
-}
-.commenterImage {
-    width:30px;
-    margin-right:5px;
-    height:100%;
-    float:left;
-}
-.commenterImage img {
-    width:100%;
-    border-radius:50%;
-}
-.commentText p {
-    margin:0;
-}
-.sub-text {
-    color:#aaa;
-    font-family:verdana;
-    font-size:11px;
-}
-.actionBox {
-    border-top:1px dotted #bbb;
-    padding:10px;
-}
-/*.commentField .form-group:first-child, .boxField .form-group:first-child 
-{
-  width: 80%;
-} */
-
-
-=======
 .loginContainer {
   border-color: aquamarine 15px;
   background-color: aliceblue;
   width: 400px;
   height: 300px; }
->>>>>>> 72bf8f71122f69e7b34b4c12aa5a26a120b727ad
 
 /*# sourceMappingURL=style.css.map */
+
+.superButtons {
+  display: flex;
+  justify-content: center;
+  
+}
