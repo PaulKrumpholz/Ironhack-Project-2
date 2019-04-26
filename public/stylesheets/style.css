@@ -7082,13 +7082,27 @@ body {
   color: white; }
 
 #myPasswordSignup {
-  background-color: #212121;
+  background-color: #343a40;
   color: white; }
 
 .loginContainer {
-  border-color: aquamarine 15px;
-  background-color: aliceblue;
+  border-color: #212121;
+  background-color: #343a40;
   width: 400px;
-  height: 300px; }
+  height: 300px;
+  border-radius: 15px; }
+
+.wrapper-btn {
+  margin: 0 auto; }
+
+.container-signup {
+  border-color: #212121;
+  background-color: #343a40;
+  width: 400px;
+  height: 300px;
+  border-radius: 15px; }
+
+#Nav {
+  border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */
