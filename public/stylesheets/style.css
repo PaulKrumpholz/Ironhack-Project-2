@@ -7085,4 +7085,10 @@ body {
   background-color: #212121;
   color: white; }
 
+.loginContainer {
+  border-color: aquamarine 15px;
+  background-color: aliceblue;
+  width: 400px;
+  height: 300px; }
+
 /*# sourceMappingURL=style.css.map */

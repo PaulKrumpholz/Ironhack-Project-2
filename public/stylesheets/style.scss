@@ -50,7 +50,7 @@ body {
   bottom: 10px
 }
 body {
-  background-image: url("/images/index.jpg");
+  background-image: url("/images/index.png");
 }
 #myPasswordLogin{
 background-color:rgb(52, 58, 64);
@@ -69,3 +69,12 @@ color: white;
 
 }
 
+
+
+.loginContainer{
+border-color: aquamarine 15px;
+background-color: aliceblue;
+width: 400px;
+height: 300px;
+
+}
